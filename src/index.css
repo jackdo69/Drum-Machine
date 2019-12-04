@@ -12,3 +12,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#drum-machine {
+  background-color: #FFA07A;
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+#display {
+  background-color: #FFFFE0;
+  border-radius: 5px;
+  text-align: center;
+  margin: 3px;
+}
+
+#drum-pads {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.drum-pad {
+  background-color: #008080;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 100px;
+
+  box-shadow:4px 4px 4px grey;
+}
