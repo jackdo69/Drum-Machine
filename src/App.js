@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import DrumPad from './DrumPad';
 
 const data = [
@@ -18,12 +17,13 @@ class DrumMachine extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      display:'Click or Press a pad'
+      display:'Click or Press a pad',
+      style:'drum-pad'
     }
     this.handleDisplay = this.handleDisplay.bind(this)
   }
 
-  handleDisplay = display => this.setState({display})
+  handleDisplay = (display) => this.setState({display})
 
   render() {
     return(
@@ -35,11 +35,12 @@ class DrumMachine extends React.Component {
         <div id="drum-pads">
           {data.map(d => (
             <DrumPad
-            key={d.id}
-            id={d.id}
-            letter={d.letter}
-            src={d.src}
-            handleDisplay={this.handleDisplay} />
+              style={this.state.style}
+              key={d.id}
+              id={d.id}
+              letter={d.letter}
+              src={d.src}
+              handleDisplay={this.handleDisplay} />
             ))}
         </div>
       </div>

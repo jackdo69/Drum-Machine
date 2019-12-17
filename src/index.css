@@ -17,7 +17,7 @@ code {
   background-color: #FFA07A;
   width: 30%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10em;
   border-radius: 5px;
   padding: 8px;
 }
@@ -33,15 +33,28 @@ code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .drum-pad {
   background-color: #008080;
   padding: 5px;
   margin: 5px;
-  border-radius: 5px;
-  width: 100px;
-
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
   box-shadow:4px 4px 4px grey;
+  transition-duration: 0.5s;
+}
+
+.letter {
+  text-align: center;
+  font-size: 2em;
+}
+
+.drum-pad:active {
+  transform: scale(1.5);
+  background-color: whitesmoke;
+  border: violet;
 }
